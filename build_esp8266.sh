@@ -497,8 +497,6 @@ if [ "$1" == "FULL" ] || [ "$1" == "MAKE-ONLY" ] ||  [ "$1" == "MAKE-ONLY-ESP826
   echo "*************************************************************************************************"
   cd ~/workspace/micropython/esp8266
 
-  make -C ../mpy-cross
-
   make clean
 
   make axtls
