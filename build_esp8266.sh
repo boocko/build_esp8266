@@ -488,6 +488,8 @@ if [ "$1" == "FULL" ] || [ "$1" == "MAKE-ONLY" ] ||  [ "$1" == "MAKE-ONLY-ESP826
   echo "*************************************************************************************************"
   cd ~/workspace/micropython/esp8266
 
+  make -C ../mpy-cross
+
   make clean
 
   make axtls
@@ -557,7 +559,7 @@ if [ -c "$MYDEVICE" ]; then
   echo "*************************************************************************************************"
   echo "*  Writing image..."
   echo "*************************************************************************************************"
-  execUntilSuccessful "~/workspace/esptool/esptool.py --port $MYDEVICE --baud $MYBAUD write_flash --flash_size=8m 0 \
+  execUntilSuccessful "~/workspace/esptool/esptool.py --port $MYDEVICE --baud $MYBAUD write_flash --flash_size=32m 0 \
                                       ~/workspace/micropython/esp8266/build/firmware-combined.bin"
 else
   echo "Device $MYDEVICE not found. You will need to manually upload firmware."
