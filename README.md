@@ -60,7 +60,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-Other stuff referenced:
+## Other stuff referenced:
 
 esp-open-sdk is in its nature merely a makefile, and is in public domain. However, the toolchain this makefile builds consists of many components, each having its own license. You should study and abide them all.
 
